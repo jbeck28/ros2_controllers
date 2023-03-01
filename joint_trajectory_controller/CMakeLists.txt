@@ -38,27 +38,42 @@ generate_parameter_library(joint_trajectory_controller_parameters
   include/joint_trajectory_controller/validate_jtc_parameters.hpp
 )
 
+include_directories(include)
+
 add_library(${PROJECT_NAME} SHARED
   src/joint_trajectory_controller.cpp
   src/trajectory.cpp
 )
-target_include_directories(${PROJECT_NAME} PRIVATE include)
+# target_include_directories(${PROJECT_NAME} PRIVATE include)
+
+target_include_directories(${PROJECT_NAME} PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+        $<INSTALL_INTERFACE:include>)
+
 target_link_libraries(${PROJECT_NAME} joint_trajectory_controller_parameters)
 ament_target_dependencies(${PROJECT_NAME} ${THIS_PACKAGE_INCLUDE_DEPENDS})
 # Causes the visibility macros to use dllexport rather than dllimport,
 # which is appropriate when building the dll but not consuming it.
-target_compile_definitions(${PROJECT_NAME} PRIVATE "JOINT_TRAJECTORY_CONTROLLER_BUILDING_DLL" "_USE_MATH_DEFINES")
+target_compile_definitions(${PROJECT_NAME} PUBLIC "JOINT_TRAJECTORY_CONTROLLER_BUILDING_DLL" "_USE_MATH_DEFINES")
 pluginlib_export_plugin_description_file(controller_interface joint_trajectory_plugin.xml)
 
 install(DIRECTORY include/
   DESTINATION include
 )
 
-install(TARGETS joint_trajectory_controller joint_trajectory_controller_parameters
-  EXPORT export_joint_trajectory_controller
-  RUNTIME DESTINATION bin
+install(
+  TARGETS ${PROJECT_NAME} joint_trajectory_controller_parameters
+  EXPORT export_${PROJECT_NAME}
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
+  RUNTIME DESTINATION bin
+)
+
+ament_export_libraries(
+  ${PROJECT_NAME}
+)
+ament_export_targets(
+  export_${PROJECT_NAME} HAS_LIBRARY_TARGET
 )
 
 if(BUILD_TESTING)
@@ -108,9 +123,6 @@ if(BUILD_TESTING)
   # )
 endif()
 
-ament_export_targets(
-  export_joint_trajectory_controller HAS_LIBRARY_TARGET
-)
 ament_export_dependencies(
   ${THIS_PACKAGE_INCLUDE_DEPENDS}
 )
