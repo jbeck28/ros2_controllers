@@ -2,6 +2,70 @@
 Changelog for package joint_trajectory_controller
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.26.0 (2023-10-03)
+-------------------
+
+2.25.0 (2023-09-15)
+-------------------
+* [JTC] Rename parameter: normalize_error to angle_wraparound (`#772 <https://github.com/ros-controls/ros2_controllers/issues/772>`_) (`#776 <https://github.com/ros-controls/ros2_controllers/issues/776>`_)
+* Remove wrong description (`#742 <https://github.com/ros-controls/ros2_controllers/issues/742>`_) (`#747 <https://github.com/ros-controls/ros2_controllers/issues/747>`_)
+* [JTC] Update trajectory documentation (`#714 <https://github.com/ros-controls/ros2_controllers/issues/714>`_) (`#741 <https://github.com/ros-controls/ros2_controllers/issues/741>`_)
+* Contributors: Christoph Fröhlich
+
+2.24.0 (2023-08-07)
+-------------------
+* [JTC] Disable use of closed-loop PID adapter if controller is used in open-loop mode. (`#551 <https://github.com/ros-controls/ros2_controllers/issues/551>`_) (`#740 <https://github.com/ros-controls/ros2_controllers/issues/740>`_)
+* [JTC] Reject messages with effort fields (`#699 <https://github.com/ros-controls/ros2_controllers/issues/699>`_) (`#719 <https://github.com/ros-controls/ros2_controllers/issues/719>`_) (`#738 <https://github.com/ros-controls/ros2_controllers/issues/738>`_)
+* [JTC] Re-enabling test, bugfixing and hardening. Adding a parameter to define when trajectories with non-zero velocity at the end are used. (backport `#705 <https://github.com/ros-controls/ros2_controllers/issues/705>`_) (`#706 <https://github.com/ros-controls/ros2_controllers/issues/706>`_)
+* Small improvement in remapping (`#393 <https://github.com/ros-controls/ros2_controllers/issues/393>`_) (`#724 <https://github.com/ros-controls/ros2_controllers/issues/724>`_)
+* Contributors: Christoph Fröhlich, Dr. Denis, Bence Magyar
+
+2.23.0 (2023-06-23)
+-------------------
+* Renovate load controller tests (`#569 <https://github.com/ros-controls/ros2_controllers/issues/569>`_) (`#677 <https://github.com/ros-controls/ros2_controllers/issues/677>`_)
+* jtc: fix minor typo in traj validation error msg (`#674 <https://github.com/ros-controls/ros2_controllers/issues/674>`_) (`#676 <https://github.com/ros-controls/ros2_controllers/issues/676>`_)
+* Contributors: G.A. vd. Hoorn, Bence Magyar
+
+2.22.0 (2023-06-14)
+-------------------
+* Docs: Use branch name substitution for all links (backport `#618 <https://github.com/ros-controls/ros2_controllers/issues/618>`_) (`#633 <https://github.com/ros-controls/ros2_controllers/issues/633>`_)
+* [JTC] Import docs from wiki.ros.org (backport `#566 <https://github.com/ros-controls/ros2_controllers/issues/566>`_) (`#634 <https://github.com/ros-controls/ros2_controllers/issues/634>`_)
+* [Formatting] enable ReflowComments to also use ColumnLimit on comments   (`#628 <https://github.com/ros-controls/ros2_controllers/issues/628>`_)
+* Contributors: Sai Kishor Kothakota, Christoph Fröhlich
+
+2.21.0 (2023-05-28)
+-------------------
+* Deprecations in generate_parameter_library. (`#616 <https://github.com/ros-controls/ros2_controllers/issues/616>`_)
+* Remove compile warnings. (`#519 <https://github.com/ros-controls/ros2_controllers/issues/519>`_) (`#620 <https://github.com/ros-controls/ros2_controllers/issues/620>`_)
+* ported the joint_trajectory_controller query_state service to ROS2 (backport `#481 <https://github.com/ros-controls/ros2_controllers/issues/481>`_) (`#614 <https://github.com/ros-controls/ros2_controllers/issues/614>`_)
+* Fix github links on control.ros.org (`#604 <https://github.com/ros-controls/ros2_controllers/issues/604>`_) (`#617 <https://github.com/ros-controls/ros2_controllers/issues/617>`_)
+* Fix overriding of install (`#510 <https://github.com/ros-controls/ros2_controllers/issues/510>`_) (`#605 <https://github.com/ros-controls/ros2_controllers/issues/605>`_)
+* Contributors: Dr. Denis, Felix Exner (fexner), Christoph Fröhlich
+
+2.20.0 (2023-05-14)
+-------------------
+
+2.19.0 (2023-05-02)
+-------------------
+* Fix JTC from immediately returning success (`#565 <https://github.com/ros-controls/ros2_controllers/issues/565>`_) (`#592 <https://github.com/ros-controls/ros2_controllers/issues/592>`_)
+* Implement new ~/controller_state message (`#578 <https://github.com/ros-controls/ros2_controllers/issues/578>`_)
+* Contributors: Christoph Fröhlich, mergify[bot]
+
+2.18.0 (2023-04-29)
+-------------------
+* Fix docs format (`#591 <https://github.com/ros-controls/ros2_controllers/issues/591>`_)
+* [JTC] Configurable joint positon error normalization behavior (`#491 <https://github.com/ros-controls/ros2_controllers/issues/491>`_) (`#579 <https://github.com/ros-controls/ros2_controllers/issues/579>`_)
+* Contributors: Christoph Fröhlich, Bence Magyar
+
+2.17.3 (2023-04-14)
+-------------------
+* [JTC] Add pid gain structure to documentation (`#485 <https://github.com/ros-controls/ros2_controllers/issues/485>`_) (`#543 <https://github.com/ros-controls/ros2_controllers/issues/543>`_)
+* Fix markup in userdoc.rst (`#480 <https://github.com/ros-controls/ros2_controllers/issues/480>`_) (`#542 <https://github.com/ros-controls/ros2_controllers/issues/542>`_)
+* Contributors: Christoph Fröhlich
+
+2.17.2 (2023-03-07)
+-------------------
+
 2.17.1 (2023-02-20)
 -------------------
 

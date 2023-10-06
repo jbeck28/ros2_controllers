@@ -2,6 +2,48 @@
 Changelog for package effort_controllers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.26.0 (2023-10-03)
+-------------------
+* [Doc] Add specific documentation on the available fw cmd controllers (`#765 <https://github.com/ros-controls/ros2_controllers/issues/765>`_) (`#778 <https://github.com/ros-controls/ros2_controllers/issues/778>`_)
+* Contributors: mergify[bot]
+
+2.25.0 (2023-09-15)
+-------------------
+
+2.24.0 (2023-08-07)
+-------------------
+
+2.23.0 (2023-06-23)
+-------------------
+* Renovate load controller tests (`#569 <https://github.com/ros-controls/ros2_controllers/issues/569>`_) (`#677 <https://github.com/ros-controls/ros2_controllers/issues/677>`_)
+* Contributors: Bence Magyar
+
+2.22.0 (2023-06-14)
+-------------------
+* Docs: Use branch name substitution for all links (backport `#618 <https://github.com/ros-controls/ros2_controllers/issues/618>`_) (`#633 <https://github.com/ros-controls/ros2_controllers/issues/633>`_)
+* Contributors: Christoph Fröhlich
+
+2.21.0 (2023-05-28)
+-------------------
+* Fix github links on control.ros.org (`#604 <https://github.com/ros-controls/ros2_controllers/issues/604>`_) (`#617 <https://github.com/ros-controls/ros2_controllers/issues/617>`_)
+* Fix overriding of install (`#510 <https://github.com/ros-controls/ros2_controllers/issues/510>`_) (`#605 <https://github.com/ros-controls/ros2_controllers/issues/605>`_)
+* Contributors: Felix Exner (fexner), Christoph Fröhlich
+
+2.20.0 (2023-05-14)
+-------------------
+
+2.19.0 (2023-05-02)
+-------------------
+
+2.18.0 (2023-04-29)
+-------------------
+
+2.17.3 (2023-04-14)
+-------------------
+
+2.17.2 (2023-03-07)
+-------------------
+
 2.17.1 (2023-02-20)
 -------------------
 
